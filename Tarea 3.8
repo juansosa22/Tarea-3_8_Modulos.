@@ -1,0 +1,39 @@
+Paso 1:
+import collections
+import matplotlib.pyplot as plt
+
+Paso 2:
+palabras = texto.lower().split()
+contador = collections.Counter(palabras)
+
+Paso 3:
+comunes = contador.most_common(10)
+
+Paso 4:
+palabras, frecuencias = zip(*comunes)
+
+Paso 5:
+plt.bar(palabras, frecuencias)
+plt.xticks(rotation=45)
+plt.title('Palabras más comunes')
+plt.show()
+
+Paso 6:
+ frecuencias = zip(*comunes)
+
+Paso 7:
+plt.figure(figsize=(10, 6))
+
+plt.bar(palabras, frecuencias, color='skyblue')
+
+plt.xticks(rotation=45)
+
+plt.xlabel('Palabras')
+
+plt.ylabel('Frecuencia')
+
+plt.title('Palabras más comunes')
+
+plt.tight_layout()
+
+plt.show()
